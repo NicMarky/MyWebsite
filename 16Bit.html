@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>16-Bit Multiplexer</title>
+<link rel="stylesheet" href="Proj.css" type="text/css">
+</head>
+
+<body>
+<nav>
+<div class="logo">Engr. Nic Services</div>
+<ul class="nic-nav">
+<li><a href="Nic.html">Home</a></li>
+<li><a href="MyProjects.html">Projects</a></li>
+<li><a href="AboutMe.html">About Me</a></li>
+<li><a href="ContactMe.html">Contact Me</a></li>
+</ul>
+</nav>
+
+<h1>16-Bit Multiplexer</h1>
+
+<section class="container">
+
+<div class="slider-wrapper">
+
+  <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button> <!-- For  Left Arrow -->
+  <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>  <!-- For  Right Arrow -->
+
+  <div class="slider" id="slider-track">
+
+    <div id="slide-1">
+        <img src="16bit1.jpg">
+        <div class="label">Initial</div>
+    </div>
+
+    <div id="slide-2">
+        <img src="16bit.jpg">
+        <div class="label">Final</div>
+    </div>
+
+  </div>
+
+  <div class="slider-nav">
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+  </div>
+
+</div>
+</section>
+
+<p>
+This is a 16-Bit Multiplexers which is made of basic logic gates (ic).
+<br>It simulates how data inputs can share one output as it allows a single pathway to be shared among multiple data sources, directing only the chosen one to the output.
+Built entirely from basic gates, it takes 16 different input signals and uses a set of select lines to decide which single signal gets through to the output. It is essentially the "traffic controller" of a digital circuit.
+</p>
+
+<script>
+<!--Code in Java Language -->
+  function moveSlide(direction) {
+    const slider = document.getElementById('slider-track');
+    const slideWidth = slider.clientWidth; // Measures how wide one slide is
+    
+    slider.scrollBy({
+      left: slideWidth * direction,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

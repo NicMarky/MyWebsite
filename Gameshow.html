@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Gameshow Buzzer</title>
+<link rel="stylesheet" href="Proj.css" type="text/css">
+</head>
+
+<body>
+<nav>
+<div class="logo">Engr. Nic Services</div>
+<ul class="nic-nav">
+<li><a href="Nic.html">Home</a></li>
+<li><a href="MyProjects.html">Projects</a></li>
+<li><a href="AboutMe.html">About Me</a></li>
+<li><a href="ContactMe.html">Contact Me</a></li>
+</ul>
+</nav>
+
+<h1>Gameshow Buzzer</h1>
+
+<section class="container">
+
+<div class="slider-wrapper">
+
+  <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button> <!-- For  Left Arrow -->
+  <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>  <!-- For  Right Arrow -->
+
+  <div class="slider" id="slider-track">
+
+    <div id="slide-1">
+        <img src="game1.jpg">
+        <div class="label">Gameshow LCD Display</div>
+    </div>
+
+    <div id="slide-2">
+        <img src="game2.jpg">
+        <div class="label">Gameshow LCD Display 2</div>
+    </div>
+
+    <div id="slide-3">
+        <img src="game3.jpg">
+        <div class="label">Initial System</div>
+    </div>
+
+    <div id="slide-4">
+        <img src="game4.jpg">
+        <div class="label">Final System</div>
+    </div>
+
+  </div>
+
+  <div class="slider-nav">
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-3"></a>
+    <a href="#slide-4"></a>
+  </div>
+
+</div>
+</section>
+
+<p>
+This is a Gameshow Button Buzzer which runs by Arduino Codes.
+<br>It consist of 11 Button which indicates 11 players to play and the first player that push the game button will allow to answer<br> the question which means by default al button lights on unti one player who pushes it first stays it on while the other is off.
+This is a "First-Response" lockout circuit. The logic ensures that the moment one player presses their button, all other inputs are instantly disabled (locked out). The system also includes a "referee" logic where an incorrect answer resets the lockout, allowing other players back into the game.
+</p>
+
+<script>
+<!--Code in Java Language -->
+  function moveSlide(direction) {
+    const slider = document.getElementById('slider-track');
+    const slideWidth = slider.clientWidth; 
+    
+    slider.scrollBy({
+      left: slideWidth * direction,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

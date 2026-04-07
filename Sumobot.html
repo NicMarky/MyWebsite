@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Sumo Robot</title>
+<link rel="stylesheet" href="Proj.css" type="text/css">
+</head>
+
+<body>
+<nav>
+<div class="logo">Engr. Nic Services</div>
+<ul class="nic-nav">
+<li><a href="Nic.html">Home</a></li>
+<li><a href="MyProjects.html">Projects</a></li>
+<li><a href="AboutMe.html">About Me</a></li>
+<li><a href="ContactMe.html">Contact Me</a></li>
+</ul>
+</nav>
+
+<h1>Sumo Robot</h1>
+
+<section class="container">
+
+<div class="slider-wrapper">
+
+  <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button> <!-- For  Left Arrow -->
+  <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>  <!-- For  Right Arrow -->
+
+  <div class="slider" id="slider-track">
+
+    <div id="slide-1">
+        <img src="sumo4.jpg" alt="Before">
+        <div class="label">Initial Prototype</div>
+    </div>
+
+    <div id="slide-2">
+        <img src="sumo1.jpg" alt="Soldering">
+        <div class="label">Prototype Image 1</div>
+    </div>
+
+    <div id="slide-3">
+        <img src="sumo2.jpg" alt="Semi-Finished">
+        <div class="label">Prototype Image 2</div>
+    </div>
+
+    <div id="slide-4">
+        <img src="sumo3.jpg" alt="After">
+        <div class="label">Final</div>
+    </div>
+
+  </div>
+
+  <div class="slider-nav">
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-3"></a>
+    <a href="#slide-4"></a>
+  </div>
+
+</div>
+</section>
+
+<p>
+This is a Blutooth R/C Sumo Robot which runs by Arduino Codes.
+<br>It can be controlled via application in Mobile Phone.
+</p>
+
+<script>
+<!--Code in Java Language -->
+  function moveSlide(direction) {
+    const slider = document.getElementById('slider-track');
+    const slideWidth = slider.clientWidth; // Measures how wide one slide is
+    
+    slider.scrollBy({
+      left: slideWidth * direction,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>
