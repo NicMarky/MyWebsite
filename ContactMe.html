@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Contact Me</title>
+<link rel="stylesheet" href="contact.css" type="text/css">
+
+<style>
+body{ 
+    background-image:url('NicBG.png');
+    background-repeat:no-repeat;
+    background-size:cover; 
+    font-family: Arial, sans-serif;
+    text-align: center;
+} 
+
+h1, p{ 
+    color: white; 
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Engr. Nic Services</div>
+<ul class="nic-nav">
+<li><a href="Nic.html">Home</a></li>
+<li><a href="MyProjects.html">Projects</a></li>
+<li><a href="AboutMe.html">About Me</a></li>
+<li><a href="ContactMe.html">Contact Me</a></li>
+</ul>
+</nav>
+
+<section>
+
+<div class="container">
+
+<h1>Contact me here !</h1>
+<br>
+<p>
+For further inquiries and help, we will respond about it.<br>
+Feel free to get in touch.
+</p>
+<br>
+<div class="contact-box">
+
+    <div class="contact-left">
+        <h3>Send your request here</h3>
+
+        <form id="contactForm">
+
+        <div class="input-row">
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Nicolai Caniedo" required>
+            </div>
+
+            <div class="input-group">
+                <label>Phone</label>
+                <input type="text" placeholder="+63 9691520698" required>
+            </div>
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="text" placeholder="nicolaimark99@gmail.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Subject</label>
+                <input type="text" placeholder="Project">
+            </div>
+        </div>
+
+        <label>Message</label>
+        <textarea rows="6" placeholder="Your Message" required></textarea>
+
+        <button type="submit">SEND</button>
+        
+        <p id="successMessage">Message sent! Please wait within 24 hours for a response.</p>
+
+        </form>
+    </div>
+
+    <div class="contact-right">
+        <h3>Reach Us</h3>
+
+        <table>
+            <tr>
+                <td>Email</td>
+                <td>nicolaimark99@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td>Phone</td>
+                <td>+63 9227377550</td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td>San Juan City</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+</div>
+
+<p>We would like to hear about your inquiries and questions.</p>
+
+</section>
+
+<script>
+<!-- Java Language -->
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+        event.preventDefault(); 
+
+        document.getElementById("successMessage").style.display = "block";
+
+        this.reset();
+        
+        setTimeout(function() {
+            document.getElementById("successMessage").style.display = "none";
+        }, 5000);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Mini Water Level Sensor</title>
+<link rel="stylesheet" href="Proj.css" type="text/css">
+</head>
+
+<body>
+<nav>
+<div class="logo">Engr. Nic Services</div>
+<ul class="nic-nav">
+<li><a href="Nic.html">Home</a></li>
+<li><a href="MyProjects.html">Projects</a></li>
+<li><a href="AboutMe.html">About Me</a></li>
+<li><a href="ContactMe.html">Contact Me</a></li>
+</ul>
+</nav>
+
+<h1>Mini Water Level Sensor</h1>
+
+<section class="container">
+
+<div class="slider-wrapper">
+
+  <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button> <!-- For  Left Arrow -->
+  <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>  <!-- For  Right Arrow -->
+
+  <div class="slider" id="slider-track">
+
+    <div id="slide-1">
+        <img src="water1.jpg">
+        <div class="label">Core of the system</div>
+    </div>
+
+    <div id="slide-2">
+        <img src="water2.jpg">
+        <div class="label">Water Level Sensor</div>
+    </div>
+
+    <div id="slide-3">
+        <img src="water3.jpg">
+        <div class="label">Final View</div>
+    </div>
+
+  </div>
+
+  <div class="slider-nav">
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-3"></a>
+  </div>
+
+</div>
+</section>
+
+<p>
+This is a Mini Water Level Sensor made of basic logic gates (ic).
+<br>Four wires placed at different heights act as probes; when water touches them, it completes a circuit. Basic gates process these signals to light up indicators. The buzzers on the top two levels serve as critical "overflow" or "high-water" alarms to prevent flooding.
+It simulates a water level sensor which the Led lights serves as the level indicator at each level of the water level.<br> The last 2 led light will be on together with the buzzer indicating the water level is about to overflow.
+</p>
+
+<script>
+<!--Code in Java Language -->
+  function moveSlide(direction) {
+    const slider = document.getElementById('slider-track');
+    const slideWidth = slider.clientWidth; // Measures how wide one slide is
+    
+    slider.scrollBy({
+      left: slideWidth * direction,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

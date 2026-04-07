@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Store Inventory System</title>
+<link rel="stylesheet" href="Proj.css" type="text/css">
+</head>
+
+<body>
+<nav>
+<div class="logo">Engr. Nic Services</div>
+<ul class="nic-nav">
+<li><a href="Nic.html">Home</a></li>
+<li><a href="MyProjects.html">Projects</a></li>
+<li><a href="AboutMe.html">About Me</a></li>
+<li><a href="ContactMe.html">Contact Me</a></li>
+</ul>
+</nav>
+
+<h1>Store Inventory System</h1>
+
+<section class="container">
+
+<div class="slider-wrapper">
+
+  <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button> <!-- For  Left Arrow -->
+  <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>  <!-- For  Right Arrow -->
+
+  <div class="slider" id="slider-track">
+
+    <div id="slide-1">
+        <img src="store1.png">
+        <div class="label">Store Choice 1</div>
+    </div>
+
+    <div id="slide-2">
+        <img src="store2.png">
+        <div class="label">Store Choice 1</div>
+    </div>
+
+    <div id="slide-3">
+        <img src="store3.png">
+        <div class="label">Store Choice 1</div>
+    </div>
+
+    <div id="slide-4">
+        <img src="store4.png">
+        <div class="label">Store Choice 1 Final Output</div>
+    </div>
+	
+    <div id="slide-5">
+        <img src="store5.png">
+        <div class="label">Store Choice 2</div>
+    </div>
+
+    <div id="slide-6">
+        <img src="store6.png">
+        <div class="label">Store Choice 2 Final Output</div>
+    </div>
+
+  </div>
+
+  <div class="slider-nav">
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-3"></a>
+    <a href="#slide-4"></a>
+	<a href="#slide-5"></a>
+    <a href="#slide-6"></a>
+  </div>
+
+</div>
+</section>
+
+<p>
+This is a Store Inventory System which runs by C++ Code.
+The system starts with an initial stock of 50 items per product, and whenever a user purchases an item, the program automatically deducts one from the total inventory (e.g., 50 decreases to 49). The inventory display updates in real time to reflect remaining stock, allowing users to monitor available items and simulate a simple purchasing and stock management process.
+</p>
+
+<script>
+<!--Code in Java Language -->
+  function moveSlide(direction) {
+    const slider = document.getElementById('slider-track');
+    const slideWidth = slider.clientWidth; 
+    
+    slider.scrollBy({
+      left: slideWidth * direction,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

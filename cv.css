@@ -1,0 +1,502 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+font-family:sans-serif;
+background-image:url("NicBG.png");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:red;
+min-height:100vh;
+
+display:flex;
+flex-direction:column;  
+align-items:center;  
+}
+
+/* CONTAINER */
+.container{
+position:relative;
+width:100%;
+max-width:1000px;
+min-height:1000px;
+background:#0f172a;
+margin:40px;
+display:grid;
+grid-template-columns:1fr 2fr;
+box-shadow:0 35px 55px rgba(0,0,0,0.2);
+}
+
+/* LEFT SIDE */
+.container .left{
+width:100%;
+color:black;
+position:relative;
+background:#38bdf8;
+padding:100px;
+}
+
+/* PROFILE */
+.profileText{
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:20px;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.profileImg{
+position:relative;
+width:200px;
+height:200px;
+border-radius:50%;
+overflow:hidden;
+}
+
+.profileImg img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.profileText h2{
+color:black;
+font-size:1.5em;
+margin-top:20px;
+text-transform:uppercase;
+text-align:center;
+font-weight:600;
+line-height:1.4em;
+}
+
+.profileText h2 span{
+font-size:0.7em;
+font-weight:300;
+}
+
+/* INFO SECTION */
+.Info{
+padding:40px;
+}
+
+.title{
+color:black;
+text-transform:uppercase;
+font-weight:600;
+letter-spacing:0.4px;
+margin-bottom:20px;
+}
+
+.Info ul{
+position:relative;
+}
+
+.Info ul li{
+list-style:none;
+margin:10px 0;
+cursor:pointer;
+}
+
+.Info ul li .icon{
+display:inline-block;
+width:30px;
+font-size:20px;
+color:black;
+}
+
+.Info ul li span{
+color:black;
+font-weight:400;
+}
+
+/* EDUCATION */
+.Info.education li{
+margin-bottom:15px;
+}
+
+.Info.education h5{
+font-weight:500;
+}
+
+.Info.education h4:nth-child(2){
+font-weight:500;
+}
+
+.Info.education h4{
+font-weight:300;
+}
+
+/* LANGUAGE BARS */
+.Info.language .percent{
+position:relative;
+width:100%;
+height:6px;
+background:white;
+display:block;
+margin-top:5px;
+}
+
+.Info.language .percent div{
+position:absolute;
+top:0;
+left:0;
+height:100%;
+background:blue;
+}
+
+/* RIGHT SIDE */
+.container .right{
+position:relative;
+background:white;
+padding:40px 50px;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+}
+
+/* ABOUT SECTIONS */
+.right .about{
+margin-bottom:40px;
+width:100%;
+}
+
+.right .about:last-child{
+margin-bottom:0;
+}
+
+.title2{
+color:#0f172a;
+text-transform:uppercase;
+margin-bottom:15px;
+font-weight:700;
+letter-spacing:1px;
+border-bottom:2px solid #38bdf8;
+padding-bottom:5px;
+}
+
+/* PARAGRAPH */
+.right p{
+color:#333;
+line-height:1.6;
+text-align:justify;
+}
+
+/* EXPERIENCE BOX */
+.right .about .box{
+display:flex;
+align-items:flex-start;
+gap:20px;
+margin:20px 0;
+}
+
+.right .about .box .Project{
+min-width:180px;
+}
+
+.right .about .box .Project h3{
+color:#38bdf8;
+font-weight:600;
+}
+
+/* PROJECT LIST */
+.right .about .box .text li{
+margin-left:20px;
+color:#222;
+line-height:1.5;
+}
+
+/* SKILLS SECTION */
+.Skills{
+margin-top:20px;
+}
+
+.Skills .box{
+position:relative;
+width:100%;
+display:grid;
+grid-template-columns:150px 1fr;
+align-items:center;
+margin:15px 0;
+}
+
+.Skills .box h4{
+color:#0f172a;
+font-weight:600;
+}
+
+.Skills .box .percent{
+position:relative;
+width:100%;
+height:10px;
+background:#e5e7eb;
+border-radius:10px;
+overflow:hidden;
+}
+
+.Skills .box .percent div{
+position:absolute;
+top:0;
+left:0;
+height:100%;
+background:#38bdf8;
+}
+
+/* INTEREST */
+.Interest{
+margin-top:30px;
+}
+
+.Interest ul{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.Interest ul li{
+list-style:none;
+color:#222;
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:500;
+}
+
+/* ABOUT SECTIONS */
+.about{
+margin-bottom:50px;
+}
+
+.about:last-child{
+margin-bottom:0px;
+}
+
+.title2{
+color:blue;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+p{
+color:black;
+}
+
+/* EXPERIENCE BOX */
+.about .box{
+display:flex;
+flex-direction:row;
+margin:20px 0;
+}
+
+.about .box .Project{
+min-width:150px;
+}
+
+.about .box .Project h3{
+text-transform:uppercase;
+color:black;
+font-weight:600;
+}
+
+.about .box .text h4{
+text-transform:uppercase;
+color:black;
+font-size:16px;
+}
+
+/* SKILLS */
+.Skills .box{
+position:relative;
+width:100%;
+display:grid;
+grid-template-columns:150px 1fr;
+justify-content:center;
+align-items:center;
+margin:10px 0;
+}
+
+.Skills .box h4{
+text-transform:uppercase;
+color:black;
+font-weight:500;
+}
+
+.Skills .box .percent{
+position:relative;
+width:100%;
+height:10px;
+background:lightskyblue;
+}
+
+.Skills .box .percent div{
+position:absolute;
+top:0;
+left:0;
+height:100%;
+background:blue;
+}
+
+/* INTEREST */
+.Interest ul{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+}
+
+.Interest ul li{
+list-style:none;
+color:black;
+font-weight:500;
+margin:12px 0;
+}
+
+.Interest ul li ion-icon{
+color:black;
+font-size:18px;
+width:35px;
+margin-right:5px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+
+.container{
+margin:10px;
+grid-template-columns:repeat(1,1fr);
+}
+
+.Interest ul{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.about .box{
+flex-direction:column;
+}
+
+.about .box .Project{
+margin-bottom:5px;
+margin-top:5px;
+}
+
+.Interest ul{
+grid-template-columns:repeat(1,1fr);
+}
+
+.Skills .box{
+grid-template-columns:repeat(1,1fr);
+}
+
+}
+
+a{
+text-decoration: none;
+color: inherit;
+}
+
+/* For Contact Information Alignment */
+.Info:not(.education):not(.language) ul li{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.Info:not(.education):not(.language) ul li .icon{
+display:flex;
+align-items:center;
+justify-content:center;
+width:30px;
+font-size:20px;
+}
+
+.Info:not(.education):not(.language) ul li .text{
+display:flex;
+align-items:center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+.nic-nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #0aa9f3;
+  color: #0f172a;
+  box-shadow: 0 0 25px #0aa9f3;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  
+  
+}
+
+.nic-nav li a {
+  position: relative;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #e2e8f0;
+  transition: 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.nic-nav li a:hover {
+  background-color: #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+/* For Tablets and smaller screens */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nic-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .nic-nav li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nic-nav {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 15px #0aa9f3;
+  }
+
+  .nic-nav li a {
+    padding: 0.4rem 0.8rem;
+  }
+}

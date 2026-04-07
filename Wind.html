@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Mini Wind Speed Level Sensor</title>
+<link rel="stylesheet" href="Proj.css" type="text/css">
+</head>
+
+<body>
+<nav>
+<div class="logo">Engr. Nic Services</div>
+<ul class="nic-nav">
+<li><a href="Nic.html">Home</a></li>
+<li><a href="MyProjects.html">Projects</a></li>
+<li><a href="AboutMe.html">About Me</a></li>
+<li><a href="ContactMe.html">Contact Me</a></li>
+</ul>
+</nav>
+
+<h1>Mini Wind Speed Level Sensor</h1>
+
+<section class="container">
+
+<div class="slider-wrapper">
+
+  <button class="slider-arrow prev" onclick="moveSlide(-1)">&#10094;</button> <!-- For  Left Arrow -->
+  <button class="slider-arrow next" onclick="moveSlide(1)">&#10095;</button>  <!-- For  Right Arrow -->
+
+  <div class="slider" id="slider-track">
+
+    <div id="slide-1">
+        <img src="wind1.jpg">
+        <div class="label">Gameshow LCD Display</div>
+    </div>
+
+    <div id="slide-2">
+        <img src="wind2.jpg">
+        <div class="label">Gameshow LCD Display 2</div>
+    </div>
+
+    <div id="slide-3">
+        <img src="wind3.jpg">
+        <div class="label">Initial System</div>
+    </div>
+
+    <div id="slide-4">
+        <img src="wind.jpg">
+        <div class="label">Final System</div>
+    </div>
+
+  </div>
+
+  <div class="slider-nav">
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-3"></a>
+    <a href="#slide-4"></a>
+  </div>
+
+</div>
+</section>
+
+<p>
+This is a wind speed monitoring system designed using basic digital logic gates and a DIP switch as the input source.
+The DIP switch provides a 3-bit binary signal that represents different wind speed levels. The logic circuit processes these binary inputs and activates corresponding outputs such as indicator lamps and a siren based on predefined safety conditions. Green and yellow lights indicate normal to moderate wind speeds, while a red light and siren warn users when dangerous wind speeds are detected.
+</p>
+
+<script>
+<!--Code in Java Language -->
+  function moveSlide(direction) {
+    const slider = document.getElementById('slider-track');
+    const slideWidth = slider.clientWidth; 
+    
+    slider.scrollBy({
+      left: slideWidth * direction,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>
